@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { CanComponentLeave } from '../authGuard/deactivate.guard';
 
 @Component({
   selector: 'app-merchant',
   templateUrl: './merchant.component.html',
   styleUrls: ['./merchant.component.scss']
 })
-export class MerchantComponent implements OnInit {
+export class MerchantComponent implements CanComponentLeave, OnInit {
 
-  constructor() { }
+  userName = new FormControl('');
 
   ngOnInit(): void {
+    console.log("-----", this.userName);
+  }
+
+  canLeave(): boolean {
+    if (this.userName.dirty) {
+      return window.confirm("You have some changes. Save it before leaving...");
+    }
+    return true;
   }
 
 }

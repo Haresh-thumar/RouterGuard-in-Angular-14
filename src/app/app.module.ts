@@ -9,12 +9,16 @@ import { StudentComponent } from './student/student.component';
 import { MerchantComponent } from './merchant/merchant.component';
 import { ErrorComponent } from './error/error.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 /*--------------- Angular Material Module ---------------*/
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { UserComponent } from './user/user.component';
+import { ActivateGuard } from './authGuard/activate.guard';
+import { DeactivateGuard } from './authGuard/deactivate.guard';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,11 +34,13 @@ import { UserComponent } from './user/user.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
 
     MatToolbarModule, MatIconModule, MatButtonModule
   ],
-  providers: [],
+  providers: [ActivateGuard, DeactivateGuard],
   bootstrap: [AppComponent,]
 })
 export class AppModule { }

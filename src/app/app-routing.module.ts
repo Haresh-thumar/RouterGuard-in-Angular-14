@@ -9,7 +9,7 @@ import { MerchantComponent } from './merchant/merchant.component';
 import { StudentComponent } from './student/student.component';
 import { ErrorComponent } from './error/error.component';
 
-/*============= Custom Component =============*/
+/*============= Custom Guard =============*/
 import { ActivateGuard } from './authGuard/activate.guard';
 import { DeactivateGuard } from './authGuard/deactivate.guard';
 
@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'merchant', component: MerchantComponent, CanDeactivate: [DeactivateGuard] },
   { path: 'student', component: StudentComponent, canActivate: [ActivateGuard] },
+  { path: 'merchant', component: MerchantComponent, canDeactivate: [DeactivateGuard] },
   { path: 'user', component: UserComponent },
   { path: '**', component: ErrorComponent },
 ];
