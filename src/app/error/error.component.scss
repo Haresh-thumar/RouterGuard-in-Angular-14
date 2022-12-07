@@ -1,0 +1,20 @@
+.img-section {
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  vertical-align: middle;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 23%);
+}
