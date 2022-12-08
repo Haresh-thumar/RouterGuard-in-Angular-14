@@ -12,7 +12,6 @@ export class MerchantComponent implements CanComponentLeave, OnInit {
   userName = new FormControl('');
 
   ngOnInit(): void {
-    console.log("-----", this.userName);
   }
 
   canLeave(): boolean {
