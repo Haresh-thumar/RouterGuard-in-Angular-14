@@ -1,8 +1,8 @@
-<p>user works!</p>
+<h1 style="color: orangeRed; font-weight: 500; text-align: center;">.....User Component Works.....</h1>
 
-<br><br>
 <hr>
 
+<h2 style="margin-top: 30px;">Child Component is Routing Here</h2>
 <button mat-raised-button routerLink="userData/1" routerLinkActive="active" color="primary">User Data</button>
 <button mat-raised-button routerLink="userTable/2" routerLinkActive="active" color="accent">User Table</button>
 <button mat-raised-button routerLink="userDetail/3" routerLinkActive="active" color="primary">User Table</button>
@@ -13,3 +13,25 @@
 <div class="custom-outlet">
   <router-outlet></router-outlet>
 </div>
+
+<hr><br><br>
+
+<h2>Table Using Dynamically Data with Service</h2>
+<table id="customers">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>City</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th>Salery</th>
+  </tr>
+  <tr *ngFor="let data of users">
+    <td>{{data.id}}</td>
+    <td>{{data.name}}</td>
+    <td>{{data.city}}</td>
+    <td>{{data.mobile}}</td>
+    <td>{{data.email}}</td>
+    <td>{{data.salery}}</td>
+  </tr>
+</table>
