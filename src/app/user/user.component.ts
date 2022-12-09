@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersService } from '../services/users.service';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-user',
@@ -9,12 +11,14 @@ import { UsersService } from '../services/users.service';
 })
 export class UserComponent implements OnInit {
 
-  users: any = [];
+  users: any;
 
-  constructor(private usersData: UsersService) { }
+  constructor(private jsonData: UsersService) { }
 
   ngOnInit(): void {
-    this.users = this.usersData.getAllUsers();
+    this.jsonData.getPost().subscribe((data) => {
+      this.users = data;
+    })
   }
 
 }

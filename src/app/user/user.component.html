@@ -21,17 +21,19 @@
   <tr>
     <th>Id</th>
     <th>Name</th>
-    <th>City</th>
-    <th>Mobile</th>
     <th>Email</th>
-    <th>Salery</th>
+    <th>Mobile</th>
+    <th>Company</th>
+    <th>City</th>
+    <th>Zipcode</th>
   </tr>
   <tr *ngFor="let data of users">
     <td>{{data.id}}</td>
     <td>{{data.name}}</td>
-    <td>{{data.city}}</td>
-    <td>{{data.mobile}}</td>
     <td>{{data.email}}</td>
-    <td>{{data.salery}}</td>
+    <td>{{data.phone}}</td>
+    <td>{{data.company.name}}</td>
+    <td>{{data.address.city}}</td>
+    <td>{{data.address.zipcode}}</td>
   </tr>
 </table>

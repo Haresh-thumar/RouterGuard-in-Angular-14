@@ -29,6 +29,7 @@ import { UserFileComponent } from './user/user-file/user-file.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserImgComponent } from './user/user-img/user-img.component';
 import { UserDownloadComponent } from './user/user-download/user-download.component';
+import { UsersService } from './services/users.service';
 
 
 @NgModule({
@@ -56,7 +57,7 @@ import { UserDownloadComponent } from './user/user-download/user-download.compon
 
     MatToolbarModule, MatIconModule, MatButtonModule
   ],
-  providers: [AuthServiceService, ActivateGuard, DeactivateGuard, ActivateChildGuard],
+  providers: [AuthServiceService, ActivateGuard, DeactivateGuard, ActivateChildGuard, UsersService],
   bootstrap: [AppComponent,]
 })
 export class AppModule { }
