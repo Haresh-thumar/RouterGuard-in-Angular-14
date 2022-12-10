@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UsersService } from '../services/users.service';
-import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,13 +10,12 @@ import { HttpClient } from '@angular/common/http';
 export class UserComponent implements OnInit {
 
   users: any;
+  ActivatedRoute: any;
 
-  constructor(private jsonData: UsersService) { }
+  constructor(private activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.jsonData.getPost().subscribe((data) => {
-      this.users = data;
-    })
+    this.users = this.activateRoute.snapshot.data['data'];
   }
 
 }

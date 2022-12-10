@@ -30,6 +30,7 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserImgComponent } from './user/user-img/user-img.component';
 import { UserDownloadComponent } from './user/user-download/user-download.component';
 import { UsersService } from './services/users.service';
+import { ResolveGuardGuard } from './authGuard/resolve-guard.guard';
 
 
 @NgModule({
@@ -57,7 +58,7 @@ import { UsersService } from './services/users.service';
 
     MatToolbarModule, MatIconModule, MatButtonModule
   ],
-  providers: [AuthServiceService, ActivateGuard, DeactivateGuard, ActivateChildGuard, UsersService],
+  providers: [AuthServiceService, ActivateGuard, DeactivateGuard, ActivateChildGuard, UsersService, ResolveGuardGuard],
   bootstrap: [AppComponent,]
 })
 export class AppModule { }

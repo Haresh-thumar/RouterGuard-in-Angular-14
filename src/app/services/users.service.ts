@@ -15,7 +15,7 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   // Fetch all users data from Api with retry & error catch handling with Rxjs Operator
-  getPost(): Observable<Post[]> {
+  getUsers(): Observable<Post[]> {
     return this.http.get<Post[]>(this.url)
       .pipe(retry(3), catchError(this.handleError));
   }

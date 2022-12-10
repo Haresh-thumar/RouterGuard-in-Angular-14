@@ -19,6 +19,7 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserDownloadComponent } from './user/user-download/user-download.component';
 import { UserFileComponent } from './user/user-file/user-file.component';
 import { UserImgComponent } from './user/user-img/user-img.component';
+import { ResolveGuardGuard } from './authGuard/resolve-guard.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -29,7 +30,8 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserComponent,
-    canActivateChild: [ActivateChildGuard],
+    resolve: {data: ResolveGuardGuard},  // resolve-Guard for get user data when load compnent
+    canActivateChild: [ActivateChildGuard],   // activateChild-Guard for check if user have permission to access this component
     children: [
       { path: '', redirectTo: 'userData', pathMatch: 'full' },
       { path: 'userData/:id', component: UserDataComponent },
