@@ -55,7 +55,6 @@ import { ResolveGuardGuard } from './authGuard/resolve-guard.guard';
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-
     MatToolbarModule, MatIconModule, MatButtonModule
   ],
   providers: [AuthServiceService, ActivateGuard, DeactivateGuard, ActivateChildGuard, UsersService, ResolveGuardGuard],

@@ -8,7 +8,7 @@ export class AuthServiceService {
   constructor() { }
 
   get isLoggedIn() {
-    return true;
+    return false;
   }
 
   get isChildRouteActivate() {
