@@ -1,27 +1,50 @@
-# RoutingProject
+# Router Guard Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
-## Development server
+<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## How Many Types Router Guard Implement in this project
 
-## Code scaffolding
+<ul>
+  <li>CanActivate</li>
+  <li>CanActivateChild</li>
+  <li>CanDeactivate</li>
+  <li>CanResolve</li>
+  <li>CanLoad (working on that)</li>
+  <li>CanMatch (working on that)</li>
+</ul>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<br>
 
-## Build
+## Normal Project 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![image](https://user-images.githubusercontent.com/100337599/209809670-020f44e4-33bc-458a-91ce-050549200568.png)
 
-## Running unit tests
+## Activate Guard  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![image](https://user-images.githubusercontent.com/100337599/209810214-ef6505a4-639c-4f3b-bd1a-f527b1705ccc.png)
 
-## Running end-to-end tests
+## CanDeactivate Guard
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![image](https://user-images.githubusercontent.com/100337599/209810156-f3511ae6-f699-4749-81f2-4fa8c51db06d.png)
 
-## Further help
+## CanResolve Guard
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![image](https://user-images.githubusercontent.com/100337599/209811385-4d4d1d2f-455d-4a1d-a996-460f1db27afa.png)
+
+## CanLoad Guard
+
+
+
+## CanMatch Guard
+
+
+
+<br>
+
+<h2>* Build & Run Project</h2>
+<ul>
+  <li>ng build</li>
+  <li>ng serve | npm start</li>
+</ul>
