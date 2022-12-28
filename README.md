@@ -31,14 +31,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## CanResolve Guard
 
-![image](https://user-images.githubusercontent.com/100337599/209811385-4d4d1d2f-455d-4a1d-a996-460f1db27afa.png)
+![image](https://user-images.githubusercontent.com/100337599/209811641-99298884-0ed7-488a-a2aa-840d8dfbf056.png)
 
 ## CanLoad Guard
 
-
+working on that
 
 ## CanMatch Guard
 
+working on that
+
+
+## Project Code Screenshot
+
+![image](https://user-images.githubusercontent.com/100337599/209811905-2e50f714-8dec-4ebc-8ae5-5f4ed0afd74f.png)
 
 
 <br>
